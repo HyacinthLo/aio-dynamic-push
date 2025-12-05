@@ -168,7 +168,7 @@ class QueryBilibili(QueryTask):
                         return
 
                     timestamp = item["modules"]["module_author"]["pub_ts"]
-                    dynamic_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(timestamp))
+                    dynamic_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(timestamp)))
                     module_dynamic = item["modules"]["module_dynamic"]
 
                     content = None
