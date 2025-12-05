@@ -266,7 +266,7 @@ class QueryBilibili(QueryTask):
                         return
 
                     timestamp = item["desc"]["timestamp"]
-                    dynamic_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(timestamp))
+                    dynamic_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(int(timestamp)))
                     card_str = item["card"]
                     card = json.loads(card_str)
 
